@@ -1,13 +1,14 @@
-package com.iade.YouChoose1;
+package pt.iade.youchoose;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class YouChoose1ApplicationTests {
+class YouchooseApplicationTests {
 
 	@Test
 	void contextLoads() {
 	}
 
 }
+
