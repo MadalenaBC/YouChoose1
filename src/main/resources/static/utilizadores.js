@@ -19,7 +19,7 @@ async function showutilizador(id) {
         }
         
 
-        // document.getElementById("utilizador_nome").innerHTML = utilizador.name;
+        /// document.getElementById("utilizador_nome").innerHTML = utilizador.name;
         // document.getElementById("apelido").innerHTML = utilizador.surname;
         // document.getElementById("data_nascimento").innerHTML = utilizador.data_nascimento;
         // document.getElementById("genero").innerHTML = utilizador.genero;
