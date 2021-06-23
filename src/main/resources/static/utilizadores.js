@@ -5,7 +5,7 @@ window.onload = async function() {
 
 async function showutilizador(id) {
     try {
-        let utilizador = await $.ajax({ 
+        let utilizadores = await $.ajax({ 
             url: `/api/utilizador/escalao/${id}`,
             method: "get",
             dataType: "json"
@@ -19,7 +19,7 @@ async function showutilizador(id) {
         }
         
 
-        /// document.getElementById("utilizador_nome").innerHTML = utilizador.name;
+        document.getElementById("utilizadores").innerHTML = html;
         // document.getElementById("apelido").innerHTML = utilizador.surname;
         // document.getElementById("data_nascimento").innerHTML = utilizador.data_nascimento;
         // document.getElementById("genero").innerHTML = utilizador.genero;

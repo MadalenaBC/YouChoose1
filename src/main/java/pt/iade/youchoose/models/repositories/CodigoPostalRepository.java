@@ -6,7 +6,7 @@ import org.springframework.data.repository.CrudRepository;
 import pt.iade.youchoose.models.CodigoPostal;
 
 public interface CodigoPostalRepository extends CrudRepository<CodigoPostal,Integer> {
-
+    Iterable<CodigoPostal> findByConcelhoContaining(String text);
 
 }
 

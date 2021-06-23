@@ -9,7 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity @Table(name="TipoEvento")
+@Entity @Table(name="Tipo_evento")
 public class TipoEvento {
     @Id @GeneratedValue
         (strategy = GenerationType.IDENTITY)
@@ -31,8 +31,5 @@ public String getName() {
 }
 public Date getDate() {
     return date;
-}
-public Iterable<TipoEvento> findAll() {
-	return null;
 }
 }

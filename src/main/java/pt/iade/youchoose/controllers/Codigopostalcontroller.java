@@ -18,7 +18,7 @@ public class CodigoPostalController {
     private Logger logger = LoggerFactory.getLogger(CodigoPostalController.class);
     @Autowired
     private CodigoPostalRepository CodigoPostalRepository;
-
+    
     @GetMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<CodigoPostal> getUtilizasdores() {
         logger.info("Sending all post code");
