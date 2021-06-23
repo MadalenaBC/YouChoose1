@@ -1,5 +1,3 @@
-
-
 package pt.iade.youchoose.controllers;
 
 import org.slf4j.Logger;
@@ -15,7 +13,7 @@ import pt.iade.youchoose.models.CodigoPostal;
 
 
 @RestController
-@RequestMapping(path = "/api/youchoose3")
+@RequestMapping(path = "/api/codigopostal")
 public class CodigoPostalController {
     private Logger logger = LoggerFactory.getLogger(CodigoPostalController.class);
     @Autowired
@@ -28,5 +26,3 @@ public class CodigoPostalController {
     }
 
 }
-    
-

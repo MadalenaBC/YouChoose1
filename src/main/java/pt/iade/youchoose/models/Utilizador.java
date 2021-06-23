@@ -1,7 +1,5 @@
 package pt.iade.youchoose.models;
 
-import java.sql.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,7 +18,7 @@ private String name;
     @Column(name="ut_apelido")
 private String surname;
     @Column(name="ut_datanasc")
-private Date data_nascimento;
+private String data_nascimento;
     @Column(name="ut_genero")
 private String genero;
 @Column(name="esc_id")
@@ -44,7 +42,7 @@ public String getSurname() {
 public String getGenero() {
     return genero;
 }
-public Date getDatanasc() {
+public String getDatanasc() {
     return data_nascimento;
 }
 }

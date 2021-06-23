@@ -1,33 +1,36 @@
 window.onload = async function() {
-    let id = sessionStorage.getItem("escalaoId");
-    await showutilizador(id);
+    let escalao = sessionStorage.getItem("esc_Id");
+    await showutilizador(escalao);
 }
-
 
 async function showutilizador(id) {
     try {
-        let utilizadores = await $.ajax({ 
-            url: `/api/youchoose1/escalao/${id}`,
+        let utilizador = await $.ajax({ 
+            url: `/api/utilizador/escalao/${id}`,
             method: "get",
             dataType: "json"
         });
-        
-        console.log(JSON.stringify(utilizadores))
-        document.getElementById("id").innerHTML = utilizador.id;
-        document.getElementById("utilizador_nome").innerHTML = utilizador.name;
-        document.getElementById("apelido").innerHTML = utilizador.surname;
-        document.getElementById("data_nascimento").innerHTML = utilizador.data_nascimento;
-        document.getElementById("genero").innerHTML = utilizador.genero;
+        let html = "";
         for (let utilizador of utilizadores) {
-            html += `<section>
+            html += `<section onclick= openUtilizadorInfo(${utilizador.id})>
                     <h3>${utilizador.name}</h>
                     <p>${utilizador.surname}</p>
-                    <p>${utilizador.data_nascimento}</p>
-                    <p>${utilizador.genero}</p>
                     </section>`
         }
         
+
+        // document.getElementById("utilizador_nome").innerHTML = utilizador.name;
+        // document.getElementById("apelido").innerHTML = utilizador.surname;
+        // document.getElementById("data_nascimento").innerHTML = utilizador.data_nascimento;
+        // document.getElementById("genero").innerHTML = utilizador.genero;
+        
+        
+        
     } catch(err) {
         console.log(err);
+    }
+    function openUtilizadorInfo(id) {
+        sessionStorage.setItem("utilizadorId", id);
+        window.location = "utilizadores.html";
     }
 }

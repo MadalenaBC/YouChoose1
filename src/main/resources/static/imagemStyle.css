@@ -1,0 +1,65 @@
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    border-radius:100px;
+  }
+label {
+    display: inline-block   ;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+
+  }
+button{
+    /*Change the width as much as you like, but make sure 
+    margin-left and margin-right + width = 100%*/
+    width: auto;
+    margin: left 50px;
+    margin: right 50px;
+}
+main {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: auto;
+    position:relative;
+    border:1cm;
+    color: white;
+    padding: 32px 64px;
+    font-size: 22px;
+    opacity: 0.1.;
+    transition: 0.3s;
+    display: flex;
+    text-decoration:wavy;
+    cursor:auto;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+main > section {
+    padding: 10px;
+    display: flow-root;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: auto;
+    position:relative;
+    background-color: #0d97b0;
+    border:none;
+    color: white;
+    padding: 32px 64px;
+    font-size: 22px;
+    opacity: 0.3;
+    transition: 0.3s;
+    display:flow-root;
+    text-decoration:wavy;
+    cursor: pointer;
+    border-radius: 100%;
+    opacity: 1
+}
+button {
+    margin:0 auto;
+    display:block;
+}

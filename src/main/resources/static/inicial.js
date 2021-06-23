@@ -1,7 +1,7 @@
 window.onload = async function () {
     try {
         let escaloes = await $.ajax({
-            url: "/api/youchoose4",
+            url: "/api/escalao",
             method: "get",
             dataType: "json"
         });
@@ -18,6 +18,6 @@ window.onload = async function () {
     }}
 
     function openUtilizadorinfo(id) {
-        sessionStorage.setItem("esc_Id", id);
-        window.location = "utilizadores.html";
+        sessionStorage.setItem("escalaoId", id);
+        window.location = "escalao.html";
     }

@@ -13,7 +13,7 @@ import pt.iade.youchoose.models.Evento;
 
 
 @RestController
-@RequestMapping(path = "/api/youchoose2")
+@RequestMapping(path = "/api/evento")
 public class EventoController {
     private Logger logger = LoggerFactory.getLogger(EventoController.class);
     @Autowired
