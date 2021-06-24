@@ -11,12 +11,12 @@ window.onload = async function () {
                     <h3>${forum.name}</h>
                     </section>`
         }
-        document.getElementById("foruns").innerHTML = html;
+        document.getElementById("forum3").innerHTML = html;
     } catch (err) {
         console.log(err);
     }}
 
     function openUtilizadorinfo(id) {
-        sessionStorage.setItem("for_Id", id);
+        sessionStorage.setItem("forum_Id", id);
         window.location = "tutoriais.html";
     }

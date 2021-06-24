@@ -19,6 +19,8 @@ private int id;
 private String name;
     @Column(name="ev_data")
 private Date date;
+    @Column(name="tev_id") 
+private int tevid;
     
 
 public Evento() {} // Need empty constructor
@@ -31,5 +33,8 @@ public String getName() {
 }
 public Date getDate() {
     return date;
+}
+public int getTevid() {
+	return tevid;
 }
 }

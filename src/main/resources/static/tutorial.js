@@ -1,5 +1,5 @@
 window.onload = async function() {
-    let forum = sessionStorage.getItem("for_Id");
+    let forum = sessionStorage.getItem("forum_Id");
     await showtutorial(forum);
 }
 

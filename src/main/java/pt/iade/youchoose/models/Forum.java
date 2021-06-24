@@ -11,9 +11,9 @@ import javax.persistence.Table;
 public class Forum {
     @Id @GeneratedValue
         (strategy = GenerationType.IDENTITY)    
-    @Column(name="for_id") 
+    @Column(name="forum_id") 
 private int id;
-    @Column(name="for_nome")
+    @Column(name="forum_nome")
 private String name;
   
 

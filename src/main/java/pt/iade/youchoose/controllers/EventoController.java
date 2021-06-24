@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,10 +21,14 @@ public class EventoController {
     private EventoRepository EventoRepository;
 
     @GetMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Iterable<Evento> getUtilizasdores() {
+    public Iterable<Evento> getUtilizadores() {
         logger.info("Sending all events");
         return EventoRepository.findAll();
     }
-
+    @GetMapping(path = "/tipoevento/{tipoeventoId}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<Evento> getTipoEventoByEvento(@PathVariable("tipoeventoId")Integer tipoeventoId) {
+        logger.info("Sending all id of type of events" + tipoeventoId);
+        return EventoRepository.findBytevid(tipoeventoId);
+    }
 }
 
