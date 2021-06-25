@@ -13,7 +13,7 @@ public interface UtilizadorRepository extends CrudRepository<Utilizador,Integer>
     "ut_genero AS Genero, "+
     "ut_danasc AS Data Nascimento"
     ,nativeQuery=true)   
-    Utilizador FindCompanyId( int utilizadorId);
+    Utilizador FindUtilizadorId( int utilizadorId);
 }
     
     
