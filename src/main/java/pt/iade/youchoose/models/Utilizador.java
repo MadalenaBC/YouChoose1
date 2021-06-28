@@ -46,4 +46,3 @@ public String getDatanasc() {
     return data_nascimento;
 }
 }
-
