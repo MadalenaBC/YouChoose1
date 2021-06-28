@@ -1,7 +1,7 @@
 window.onload = async function () {
     try {
         let eventos = await $.ajax({
-            url: "/api/evento",
+            url: "/api/eventos",
             method: "get",
             dataType: "json"
         });

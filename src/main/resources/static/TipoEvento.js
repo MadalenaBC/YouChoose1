@@ -6,7 +6,7 @@ window.onload = async function() {
 async function showTipoEvento(id) {
     try {
         let tipoevento = await $.ajax({ 
-            url: `/api/evento/tipoevento/${id}`,
+            url: `/api/eventos/tipoeventos/${id}`,
             method: "get",
             dataType: "json"
         });

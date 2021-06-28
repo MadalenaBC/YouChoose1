@@ -6,7 +6,7 @@ window.onload = async function() {
 async function showutilizador(id) {
     try {
         let utilizadores = await $.ajax({ 
-            url: `/api/utilizador/escalao/${id}`,
+            url: `/api/utilizadores/escalao/${id}`,
             method: "get",
             dataType: "json"
         });

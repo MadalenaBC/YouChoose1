@@ -14,19 +14,19 @@ import pt.iade.youchoose.models.Evento;
 
 
 @RestController
-@RequestMapping(path = "/api/evento")
+@RequestMapping(path = "/api/eventos")
 public class EventoController {
     private Logger logger = LoggerFactory.getLogger(EventoController.class);
     @Autowired
     private EventoRepository EventoRepository;
 
     @GetMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Iterable<Evento> getUtilizadores() {
+    public Iterable<Evento> getEventos() {
         logger.info("Sending all events");
         return EventoRepository.findAll();
     }
     @GetMapping(path = "/tipoevento/{tipoeventoId}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Iterable<Evento> getTipoEventoByEvento(@PathVariable("tipoeventoId")Integer tipoeventoId) {
+    public Iterable<Evento> getEventoByTipoEvento(@PathVariable("tipoeventoId")Integer tipoeventoId) {
         logger.info("Sending all id of type of events" + tipoeventoId);
         return EventoRepository.findBytevid(tipoeventoId);
     }

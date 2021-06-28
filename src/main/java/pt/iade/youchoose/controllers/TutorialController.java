@@ -18,7 +18,7 @@ import pt.iade.youchoose.models.repositories.TutorialRepository;
 
 
 @RestController
-@RequestMapping(path = "/api/tutorial")
+@RequestMapping(path = "/api/tutoriais")
 public class TutorialController {
     private Logger logger = LoggerFactory.getLogger(TutorialController.class);
     @Autowired
