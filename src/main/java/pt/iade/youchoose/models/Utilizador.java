@@ -19,16 +19,22 @@ private String name;
 private String surname;
     @Column(name="ut_datanasc")
 private String data_nascimento;
+    @Column(name="ut_idade")
+private String idade;
     @Column(name="ut_genero")
 private String genero;
-@Column(name="esc_id")
-private int escalaoId;
+    @Column(name="ut_total_pontos")
+private int TotalPontos;
+    @Column(name="esc_id")
+private String escalaoId;
+    @Column(name="cp_id")
+private int cp_Id;
 
 
-public Utilizador(String genero) {
-        this.genero = genero;
-    }
-public Utilizador() {} // Need empty constructor
+
+
+public Utilizador() {}
+ // Need empty constructor
 // other constructors getters and setters
 public int getId() {
     return id;
@@ -45,4 +51,19 @@ public String getGenero() {
 public String getDatanasc() {
     return data_nascimento;
 }
+public String getIdade() {
+    return idade;
+}
+public int getTotalPontos() {
+    return TotalPontos;
+}
+public int getCp_Id() {
+    return cp_Id;
+}
+public String getEscalaoId() {
+    return escalaoId;
+}
+
+
+
 }
