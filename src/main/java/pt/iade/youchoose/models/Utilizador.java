@@ -1,5 +1,7 @@
 package pt.iade.youchoose.models;
 
+
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,11 +9,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity @Table(name="utilizador")
+@Entity
+@Table(name="utilizador")
 public class Utilizador {
-    @Id @GeneratedValue
-        (strategy = GenerationType.IDENTITY)
-    @Column(name="ut_id") 
+@Id 
+@GeneratedValue (strategy = GenerationType.IDENTITY)
+@Column(name="ut_id") 
 private int id;
     @Column(name="ut_proprio")
 private String name;
@@ -20,13 +23,13 @@ private String surname;
     @Column(name="ut_datanasc")
 private String data_nascimento;
     @Column(name="ut_idade")
-private String idade;
+private int idade;
     @Column(name="ut_genero")
 private String genero;
     @Column(name="ut_total_pontos")
-private int TotalPontos;
+private String TotalPontos;
     @Column(name="esc_id")
-private String escalaoId;
+private  int escalaoId;
     @Column(name="cp_id")
 private int cp_Id;
 
@@ -34,8 +37,7 @@ private int cp_Id;
 
 
 public Utilizador() {}
- // Need empty constructor
-// other constructors getters and setters
+
 public int getId() {
     return id;
 }
@@ -45,23 +47,23 @@ public String getName() {
 public String getSurname() {
     return surname;
 }
+public int getIdade() {
+    return idade;
+}
 public String getGenero() {
     return genero;
 }
-public String getDatanasc() {
-    return data_nascimento;
-}
-public String getIdade() {
-    return idade;
-}
-public int getTotalPontos() {
-    return TotalPontos;
+public int getEscalaoId() {
+    return escalaoId;
 }
 public int getCp_Id() {
     return cp_Id;
 }
-public String getEscalaoId() {
-    return escalaoId;
+public String getDatanasc() {
+    return data_nascimento;
+}
+public String getTotalPontos() {
+    return TotalPontos;
 }
 
 

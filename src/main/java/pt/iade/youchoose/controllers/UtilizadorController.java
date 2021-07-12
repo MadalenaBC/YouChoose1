@@ -22,6 +22,7 @@ import pt.iade.youchoose.models.repositories.UtilizadorRepository;
 @RestController
 @RequestMapping(path = "/api/utilizadores")
 public class UtilizadorController {
+  
     private Logger logger = LoggerFactory.getLogger(UtilizadorController.class);
     @Autowired
     private UtilizadorRepository UtilizadorRepository;

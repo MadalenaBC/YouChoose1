@@ -13,6 +13,20 @@ window.onload = async function() {
     } catch (err) {
         console.log(err);    
     }
+    try {
+        let escaloes = await $.ajax({
+            url: "/api/youchoose4",
+            method: "get",
+            dataType: "json"
+        });
+        let html="";
+        for (let escalao of escaloes) {
+            html+= "<option value=" + Escalao.id + ">" + Escalao.name +  "</option>";
+            }
+        document.getElementById("escaloes").innerHTML = html;
+    } catch (err) {
+        console.log(err);    
+    }
     
 }
 async function adduser() {
@@ -20,13 +34,13 @@ async function adduser() {
         let user = {
             name: document.getElementById("name").value,
             surname:document.getElementById("apelido").value,
-            data_nascimento:document.getElementById("data_nascimento").value,
             idade:document.getElementById("idade").value,
-            genero:document.getElementById(" genero").value,
-            TotalPontos:document.getElementById("TotalPontos").value,
-            escalaoId:document.getElementById(" escalaoId").value,
-            cp_Id: document.getElementById("Listacp").value,
-            
+            genero:document.getElementById("genero").value,
+            escalaoId:document.getElementById("escaloes").value,
+            cp_Id:document.getElementById("Listacp").value,
+            data_nascimento:document.getElementById("data_nascimento").value,
+            TotalPontos:document.getElementById("TotalPontos").value
+           
         }
         console.log(JSON.stringify(user));
         let result = await $.ajax({
