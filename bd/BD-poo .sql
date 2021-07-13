@@ -1,3 +1,4 @@
+/*drop database youchoose1*/
 Create database youchoose1;
 Use youchoose1;
 
@@ -25,6 +26,16 @@ CREATE TABLE Escalao (
             Constraint pk_esc primary key (esc_id)
             
 );
+
+/* Caracteristicas do evento proposto pela youchoose */
+
+CREATE TABLE Tipo_evento (
+			tev_id int not null auto_increment,
+            tev_nome varchar (50) not null,
+            tev_data date,
+            Constraint pk_pktev primary key (tev_id)
+);
+
 /* A tabela evento consiste nos eventos que a youchoose irá propror aos utilizadores **/
 
 CREATE TABLE Evento (
@@ -47,15 +58,6 @@ CREATE TABLE Forum (
 
 
 
-/* Caracteristicas do evento proposto pela youchoose */
-
-CREATE TABLE Tipo_evento (
-			tev_id int not null auto_increment,
-            tev_nome varchar (50) not null,
-            tev_data date,
-            Constraint pk_pktev primary key (tev_id)
-);
-
 /********
 *  Lista de Entidades Informaconais fracas
 ********/
@@ -74,26 +76,24 @@ CREATE TABLE Tutorial (
 ********/
 
 /* Dados pessoais inseridos pelo utlizador ao criar a sua conta na youchoose */
-
 CREATE TABLE Utilizador (
-			ut_id int default 0 not null ,
-            ut_proprio varchar (50) not null,
-            ut_apelido varchar (50) not null ,
-            ut_datanasc date not null , 
-            ut_idade int not null ,
-            ut_total_pontos int not null ,
-            cp_id int not null,
-            esc_id int not null,
-            ut_genero varchar (20) not null ,
+			ut_id int auto_increment  ,
+            ut_proprio varchar (50)   ,
+            ut_apelido varchar (50)   ,
+            ut_datanasc date , 
+            ut_idade int  ,
+            ut_total_pontos int ,
+            cp_id int  ,
+            esc_id int  ,
+            ut_genero varchar (20)  ,
             Constraint pk_ut primary key (ut_id),
-            Constraint fk_cp1 foreign key (cp_id)references Codigopostal(cp_id),
-            Constraint fk_esc1 foreign key (esc_id)references escalao (esc_id),
+            Constraint fk_cp1 foreign key (cp_id) references Codigopostal(cp_id),
+            Constraint fk_esc1 foreign key (esc_id) references escalao (esc_id),
              /* segundo as regras de integridade de negócio da youchoose 
             não são permitidas pessoas com idade inferior a 18 anos*/
             
-			check (ut_idade >= 18)
-		
-);
+			check (ut_idade >= 18));
+
 
  /* Caracteristicas do evento proposto pela youchoose */    
  
@@ -153,7 +153,7 @@ INSERT INTO Codigopostal values
 	(28, "Amadora" ,"Alfragide" , "Portugal", "1765" ,  "265"),
 	(29, "Amadora" ,"Alfragide" , "Portugal", "1765" ,  "265"),
 	(30, "lisboa" ,"Campolide" , "Portugal", "1070" ,  "183");
-
+select * from codigoPostal;
 
 INSERT INTO Escalao values
 	(1, "Novato" ,"20"),
@@ -264,6 +264,7 @@ INSERT INTO Utilizador values
 	(30, "Alfredo","Gonçalves", "1954-05-05","67", 21, 30,3,"Maculino");
 
 select*from Utilizador;
+           
 
 
 INSERT INTO Forum values 

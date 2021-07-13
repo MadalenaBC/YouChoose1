@@ -38,8 +38,8 @@ async function adduser() {
             genero:document.getElementById("genero").value,
             escalaoId:document.getElementById("escaloes").value,
             cp_Id:document.getElementById("Listacp").value,
-            data_nascimento:document.getElementById("data_nascimento").value,
-            TotalPontos:document.getElementById("TotalPontos").value
+            data_nasc:document.getElementById("data_nascimento").value,
+            totalPontos:document.getElementById("TotalPontos").value
            
         }
         console.log(JSON.stringify(user));
