@@ -21,7 +21,7 @@ window.onload = async function() {
         });
         let html="";
         for (let escalao of escaloes) {
-            html+= "<option value=" + Escalao.id + ">" + Escalao.name +  "</option>";
+            html+= "<option value=" + escalao.id + ">" + escalao.name +  "</option>";
             }
         document.getElementById("escaloes").innerHTML = html;
     } catch (err) {
